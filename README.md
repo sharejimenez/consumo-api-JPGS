@@ -8,7 +8,7 @@ Este proyecto es una aplicación en Angular que consume la API de la escuela par
 - [Descripción](#descripción)
 - [Características](#características)
 - [Instalación](#instalación)
-- [Estructura del Proyecto](#Estructura del Proyecto)
+- [Estructura](#Estructura)
 - [Refrexiones](#Reflexiones)
 - [Tecnologías](#tecnologías)
 
@@ -35,7 +35,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto:
    ```bash
    git clone https://github.com/sharejimenez/consumo-api-JPGS.git
    cd proyecto
-## Estructura del Proyecto
+## Estructura
 1. **Creación del proyecto en Angular**: 
    - Comando para crear el proyecto: `ng new consumo-api-JPGS`
 2. **Servicio para consumir la API**: 
