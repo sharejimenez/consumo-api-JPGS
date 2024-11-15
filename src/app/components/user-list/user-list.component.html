@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Lista de usuarios Escuela</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.role }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>

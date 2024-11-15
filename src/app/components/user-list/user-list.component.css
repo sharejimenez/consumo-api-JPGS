@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 25px; 
+}
+
+mat-card {
+    background-color: #ffffff; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+mat-card-header {
+    background-color: #ad6dea; 
+    color: white; 
+    padding: 16px;
+}
+
+.table {
+    margin-top: 16px; 
+}
+
+.table th {
+    background-color: #a1cbdf; }
+
+.table td {
+    vertical-align: middle; 
+}
