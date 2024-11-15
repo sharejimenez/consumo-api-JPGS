@@ -50,11 +50,59 @@ Sigue estos pasos para instalar y ejecutar el proyecto:
 5. **Integración y ejecución**:
    - Integración del componente en `app.component.html`.
    - Ejecución: `ng serve`
+## Preguntas
+-Pregunta a: ¿Qué hace el método getUsers en este servicio?
 
+El método getUsers en el servicio UserService tiene como objetivo obtener una
+lista de usuarios desde una API externa.
+Solicitud HTTP GET:
+El método utiliza el HttpClient para realizar una solicitud HTTP de tipo GET a la URL
+especificada en apiUrl, que apunta a la API de usuarios
+(https://api.escuelajs.co/api/v1/users).
+El método devuelve un Observable de tipo any[].
+
+-Pregunta b: ¿Qué función cumple el método ngOnInit en el componente
+UserListComponent?
+
+Cumple con la función para cargar datos, inicializa la lista de usuarios al suscribirse
+al servicio UserService, asegurando que this.users contenga la información
+necesaria cuando el componente se renderiza.
+
+-Pregunta c: ¿Para qué sirve el bucle *ngFor en Angular? Explica cómo se utiliza
+en este ejemplo.
+
+El bucle *ngFor en Angular sirve para iterar sobre listas o arreglos de datos en las plantillas HTML, permitiendo generar elementos dinámicamente a partir de los
+elementos de una colección.
 ## Reflexiones
-1. **Ventajas de los servicios en Angular**: Facilitan la reutilización y separación de lógica de negocio.
-2. **Importancia de separar la lógica de negocio de la lógica de presentación**: Mejora la mantenibilidad y escalabilidad.
-3. **Posibles integraciones de APIs**: APIs de autenticación, pagos, geográficas, sociales, y meteorológicas.
+-1. ¿Qué ventajas tiene el uso de servicios en Angular para el consumo de APIs?
+Los servicios permiten encapsular la lógica de negocio y las interacciones con APIs
+en una única unidad, lo que facilita la organización del código y su mantenimiento.
+Esto permite que diferentes componentes accedan a la misma funcionalidad sin
+duplicar código. Al definir servicios, se puede reutilizar la lógica en múltiples
+componentes, así mismo los servicios ayudan a mantener una clara separación
+entre la lógica de presentación y la lógica de negocio.
+-2. ¿Por qué es importante separar la lógica de negocio de la lógica de presentación?
+
+Mantenibilidad: Cuando se separan estas lógicas, el código se vuelve más fácil de
+entender y mantener. Los cambios en la lógica de negocio no afectan directamente
+a la interfaz de usuario.
+Escalabilidad: Permite escalar cada parte del sistema independientemente.
+Reutilización: La lógica de negocio puede ser reutilizada en diferentes contextos.
+-3. ¿Qué otros tipos de datos o APIs podrías integrar en un proyecto como este?
+APIs de autenticación: Para gestionar usuarios y sesiones, como OAuth o JWT.
+APIs de pagos: Integraciones con plataformas como Stripe o PayPal para procesar
+transacciones.
+APIs geográficas: Servicios como Google Maps o OpenStreetMap para
+funcionalidades relacionadas con mapas y localización.
+APIs sociales: Integraciones con redes sociales como Facebook, Twitter o
+Instagram para compartir contenido o autenticar usuarios.
+APIs meteorológicas: Para obtener información sobre el clima actual y
+pronósticos.
+PokéAPI : Contiene información sobre Pokémon, incluyendo personajes,
+habilidades y más, perfecta para crear aplicaciones relacionadas.
+OpenWeather APIs: OpenWeather es un servicio online para proporcionar datos
+meteorológicos globales y previsiones meteorológicas a través de APIs dedicadas,
+es decir, interfaces de programación.
 ## Tecnologías
 -Angular: Framework utilizado para desarrollar la aplicación frontend.
 -RxJS: Biblioteca de programación reactiva utilizada para manejar las solicitudes HTTP y las respuestas.
@@ -63,4 +111,14 @@ Sigue estos pasos para instalar y ejecutar el proyecto:
 ## Pruebas
 Las capturas del proyecto en el servidor están en la carpeta imagenes
 ## Conclusión
-El uso de APIs y servicios en Angular permite crear aplicaciones modulares, escalables y fáciles de mantener.
+Las APIs son muy prácticas, permiten reutilizar funcionalidades ya implementadas.
+En este trabajo cree un proyecto en angular y creamos un service para poder
+consumir la API. Usando angular versión 18.2 el cual contiene lo necesario para
+poder consumir las APIs. Las APIS ofrecen modularidad, reutilización y una clara
+separación de responsabilidades, lo que facilita el mantenimiento y la escalabilidad
+de las aplicaciones. Separar la lógica de negocio de la lógica de presentación es
+crucial para mejorar la mantenibilidad del código, permitir pruebas más efectivas y
+facilitar la colaboración entre equipos. Además, al integrar diferentes tipos de datos
+y APIs, como las meteorológicas, sociales o de entretenimiento, los desarrolladores
+pueden enriquecer sus aplicaciones y ofrecer experiencias más completas a los
+usuarios.
